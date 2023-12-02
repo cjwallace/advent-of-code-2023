@@ -66,6 +66,6 @@ export const part2 = (input: string): number =>
 
 if (import.meta.main) {
   const input = await Deno.readTextFile("./input.txt");
-  console.log(part01(input));
-  console.log(part02(input));
+  console.log(part1(input));
+  console.log(part2(input));
 }
