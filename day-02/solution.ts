@@ -14,22 +14,22 @@ type Game = {
 };
 
 const parseDraw = (draw: string): Draw => {
-  const balls = draw
+  const cubes = draw
     .split(",")
     .map((x) => x.trim())
     .map((x) => x.split(" "));
 
   let [red, green, blue] = [0, 0, 0];
-  for (const ball of balls) {
-    switch (ball[1]) {
+  for (const cube of cubes) {
+    switch (cube[1]) {
       case "red":
-        red = Number(ball[0]);
+        red = Number(cube[0]);
         break;
       case "green":
-        green = Number(ball[0]);
+        green = Number(cube[0]);
         break;
       case "blue":
-        blue = Number(ball[0]);
+        blue = Number(cube[0]);
         break;
     }
   }
